@@ -1,0 +1,153 @@
+{
+  "products": [
+    {
+      "name": "product 12",
+      "category": "undefined",
+      "price": 10000,
+      "quantity": 100,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "product 2",
+      "quantity": 200,
+      "price": 20000,
+      "category": "category2",
+      "categoryId": 2
+    },
+    {
+      "name": "12223",
+      "category": "category1",
+      "price": 1211212,
+      "quantity": 1211212,
+      "categoryId": 1,
+      "id": "3"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 85,
+      "quantity": 22,
+      "categoryId": 2,
+      "id": "rjui6zi"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 85,
+      "quantity": 22,
+      "categoryId": 2,
+      "id": "s4FbuZZ"
+    },
+    {
+      "name": "java",
+      "category": "category1",
+      "price": "85",
+      "quantity": "22",
+      "categoryId": "1",
+      "id": "qun50Xw"
+    },
+    {
+      "name": "java1",
+      "category": "category1",
+      "price": "85",
+      "quantity": "22",
+      "categoryId": 1,
+      "id": "KnryFwS"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category1",
+      "price": "85",
+      "quantity": "222",
+      "categoryId": "1",
+      "id": "QRGVCa4"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category1",
+      "price": "111",
+      "quantity": "22",
+      "categoryId": 1,
+      "id": "lPML6BI"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category1",
+      "price": 1111,
+      "quantity": 2211,
+      "categoryId": 1,
+      "id": "Y8SC41G"
+    },
+    {
+      "name": "java11",
+      "category": "category3",
+      "price": 122,
+      "quantity": 1221,
+      "categoryId": 3,
+      "id": "WWLs9eP"
+    },
+    {
+      "name": "java111",
+      "category": "category3",
+      "price": 50,
+      "quantity": 222,
+      "categoryId": 3,
+      "id": "EwO_ffk"
+    },
+    {
+      "name": "java1111",
+      "category": "category2",
+      "price": 122112,
+      "quantity": 122112,
+      "categoryId": 2,
+      "id": "5mCFHu0"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 10000,
+      "quantity": 222,
+      "categoryId": 2,
+      "id": "MV8aIpl"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 10000,
+      "quantity": 222,
+      "categoryId": 2,
+      "id": "nRQQwug"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 1000011,
+      "quantity": 22,
+      "categoryId": 2,
+      "id": "dRLfpyk"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 85,
+      "quantity": 100,
+      "categoryId": 2,
+      "id": "hMzRMpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "category1"
+    },
+    {
+      "id": 2,
+      "name": "category2"
+    },
+    {
+      "id": 3,
+      "name": "category3"
+    }
+  ]
+}

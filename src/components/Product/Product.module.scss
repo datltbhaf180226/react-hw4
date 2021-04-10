@@ -1,0 +1,85 @@
+.productWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tableWrapper {
+  width: 60%;
+  padding: 18px;
+  border: 1px solid #ececf5;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 3%);
+  border-radius: 4px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+
+  span {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.addProductIcon {
+  svg {
+    font-size: 20px;
+    color: #6D7379;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  label {
+    padding-left: 10px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.productTable {
+  width: 100%;
+  padding: 10px 0;
+  border-collapse: collapse;
+
+  thead tr {
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+    th {
+      height: 40px;
+    }
+  }
+
+  tbody tr {
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f7f7f7;
+    }
+
+    td {
+      height: 52px;
+      text-align: center;
+    }
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  svg {
+    font-size: 20px;
+    color: #6D7379;
+  }
+}
