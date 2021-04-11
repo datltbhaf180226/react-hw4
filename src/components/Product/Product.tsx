@@ -21,7 +21,6 @@ interface Product {
 
 function Product() {
   const [product, setProduct] = useState<Product[]>([]);
-  const [error, setError] = useState(null);
   useEffect(() => {
     (async () => {
       axios
@@ -30,7 +29,7 @@ function Product() {
         .then((data) => {
           setProduct(data);
         })
-        .catch((err) => setError(err));
+        .catch((err) => console.log(err))
     })();
   }, []);
 

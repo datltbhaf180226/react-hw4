@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
-import { useParams, Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -9,7 +9,6 @@ import Product from "../Product";
 function ProductDetail() {
   let { productId } = useParams<any>();
   const [product, setProduct] = useState<Product[]>([]);
-  const [error, setError] = useState(null);
   useEffect(() => {
     (async () => {
       axios
@@ -18,7 +17,7 @@ function ProductDetail() {
         .then((data) => {
           setProduct(data);
         })
-        .catch((err) => setError(err));
+        .catch((err) => console.log(err));
     })();
   }, []);
   return (

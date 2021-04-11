@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -13,7 +13,6 @@ interface Category {
 
 function EditProduct() {
   let { productId } = useParams<any>();
-  const [product, setProduct] = useState<Product[]>();
   const [category, setCategory] = useState<Category[]>([]);
   const [message, setMessage] = useState<String>();
 
@@ -27,32 +26,52 @@ function EditProduct() {
   useEffect(() => {
     (async () => {
       axios
-        .get(`http://localhost:4000/products?id=${productId}`)
-        .then((res) => res.data)
-        .then((data) => {
-          setProduct(data);
-          reset({
-            name: data[0].name,
-            price: data[0].price,
-            category: "0",
-            quantity: data[0].quantity,
-          });
-        })
-        .catch((err) => console.log(err));
-    })();
-  }, []);
-
-  useEffect(() => {
-    (async () => {
-      axios
         .get(`http://localhost:4000/categories`)
         .then((res) => res.data)
         .then((data) => {
           setCategory(data);
         })
+        .then(() => {
+          axios
+            .get(`http://localhost:4000/products?id=${productId}`)
+            .then((res) => res.data)
+            .then((data) => {
+              const category = {
+                id: data[0].categoryId,
+                name: data[0].category
+              }
+              reset({
+                name: data[0].name,
+                price: data[0].price,
+                category: JSON.stringify(category),
+                quantity: data[0].quantity,
+              });
+            });
+        })
+        
         .catch((err) => console.error(err));
     })();
   }, []);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     axios
+  //       .get(`http://localhost:4000/products?id=${productId}`)
+  //       .then((res) => res.data)
+  //       .then((data) => {
+  //         setProduct(data);
+  //         reset({
+  //           name: data[0].name,
+  //           price: data[0].price,
+  //           category: "0",
+  //           quantity: data[0].quantity,
+  //         });
+  //       })
+  //       .catch((err) => console.log(err));
+  //   })();
+  // }, []);
+
+  
 
   
 
@@ -72,14 +91,13 @@ function EditProduct() {
         `http://localhost:4000/products/${productId}`,
         newProduct
       );
-      console.log(newProduct);
-      setMessage("Edit successfully")
+      setMessage("Update successfully")
       setTimeout(()=> {
         setMessage("");
       }, 3000);
     } catch (err) {
       console.log(err);
-      setMessage("Edit failure")
+      setMessage("Update failure")
     }
   }
 

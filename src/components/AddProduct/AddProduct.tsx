@@ -13,14 +13,11 @@ interface Category {
 
 function AddProduct() {
   const [category, setCategory] = useState<Category[]>([]);
-  const [product, setProduct] = useState<Product>();
-  const [inputValue, setInputValue] = useState<any>();
   const [message, setMessage] = useState<String>('');
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm<Product>();
 
   useEffect(() => {
