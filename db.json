@@ -127,6 +127,14 @@
       "quantity": 100,
       "categoryId": 2,
       "id": "hMzRMpg"
+    },
+    {
+      "name": "Lê Trọng Đạt",
+      "category": "category2",
+      "price": 1211212,
+      "quantity": 1211212,
+      "categoryId": 2,
+      "id": "_DibAte"
     }
   ],
   "categories": [
